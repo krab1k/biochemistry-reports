@@ -40,7 +40,7 @@
 
 \newcommand{\experimental}{ANO}
 
-%%% Define grading categories
+% Define grading categories
 \newcommand{\expertiselevel}{X}
 \newcommand{\textlevel}{X}
 \newcommand{\graphiclevel}{X}
@@ -76,7 +76,6 @@
     {}
     {\Error{Study specialization has to one of: Biochemie, Analytická biochemie, Biomolekulární chemie, Bioinformatika, Genomika a Proteomika, -}}
 }
-   
 % end of \checkcorrectness
 }
 
@@ -92,19 +91,19 @@
 \newdimen \x
 
 \newcommand{\bpgrsupervisor}{%
-    \x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\textlevel pt + \gradetovalue\graphiclevel pt + \gradetovalue\independencelevel pt + \gradetovalue\initiativelevel pt) / 5 \relax
+\x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\textlevel pt + \gradetovalue\graphiclevel pt + \gradetovalue\independencelevel pt + \gradetovalue\initiativelevel pt) / 5 \relax
 }
 
 \newcommand{\bpgrreader}{%
-    \x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\textlevel pt + \gradetovalue\graphiclevel pt + \gradetovalue\scopelevel pt + \gradetovalue\literaturelevel pt) / 5 \relax
+\x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\textlevel pt + \gradetovalue\graphiclevel pt + \gradetovalue\scopelevel pt + \gradetovalue\literaturelevel pt) / 5 \relax
 }
 
 \newcommand{\dpgrsupervisor}{%
-    \x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\initiativelevel pt + \gradetovalue\autonomylevel pt + \gradetovalue\journallevel pt + \gradetovalue\reliabilitylevel pt + \gradetovalue\datalevel pt) / 6 \relax
+\x=\dimexpr (\gradetovalue\expertiselevel pt + \gradetovalue\initiativelevel pt + \gradetovalue\autonomylevel pt + \gradetovalue\journallevel pt + \gradetovalue\reliabilitylevel pt + \gradetovalue\datalevel pt) / 6 \relax
 }
 
 \newcommand{\dpgrreader}{%
-    \x=\dimexpr (\gradetovalue\researchlevel pt + \gradetovalue\methodiclevel pt + \gradetovalue\structurelevel pt + \gradetovalue\presentationlevel pt + \gradetovalue\discussionlevel pt + \gradetovalue\languagelevel pt) / 6 \relax
+\x=\dimexpr (\gradetovalue\researchlevel pt + \gradetovalue\methodiclevel pt + \gradetovalue\structurelevel pt + \gradetovalue\presentationlevel pt + \gradetovalue\discussionlevel pt + \gradetovalue\languagelevel pt) / 6 \relax
 }
 
 \newcommand{\calculategrade}{%
