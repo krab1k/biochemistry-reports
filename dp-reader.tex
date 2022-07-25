@@ -1,0 +1,81 @@
+\documentclass{biochemistry-reports}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typ posudku (neměňte)                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesistype}{dp}
+\renewcommand{\reporttype}{reader}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (1) Základní informace                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesisauthor}{Tomáš Marný}
+
+% Zvolte z možností: Biochemie, Biotechnologie, Bioanalytická laboratorní diagnostika ve zdravotnictví - Bioanalytik.
+\renewcommand{\studyprogramme}{Biochemie}
+
+% Pro program Biochemie zvolte jednu z možností: Biochemie, Analytická biochemie, Biomolekulární chemie, Bioinformatika, Genomika a Proteomika.
+% Pro ostatní pak -.
+\renewcommand{\specialization}{Bioinformatika}
+
+\renewcommand{\thesistitle}{Moje úžasná práce}
+\renewcommand{\thesisreader}{Mgr. Prokop Buben, Ph.D.}
+\renewcommand{\readerworkplace}{Bradavice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (2) Známky                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Zvolte hodnocení A-F v každé kategorii
+\renewcommand{\researchlevel}{A} 			% Rešerše, cíle
+\renewcommand{\methodiclevel}{A} 			% Metodika
+\renewcommand{\structurelevel}{C}			% Struktura práce
+\renewcommand{\presentationlevel}{A}		% Prezentace výsledků
+\renewcommand{\discussionlevel}{B} 		    % Diskuze výsledků
+\renewcommand{\languagelevel}{A} 			% Jazyková úroveň
+
+% Zvolte závěrečné doporučení, buď OK nebo NOK
+\newcommand{\result}{OK}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (3) Vlastní text posudku, otázky                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesisreview}{%
+% Napište text posudku místo následujícího příkazu 
+\lipsum[1-3]
+}
+
+\renewcommand{\questions}{%
+\begin{enumerate}
+    % Nahraďte otázky vlastními
+    \item Jaký je největší přínos vaší práce?
+    \item Co by šlo dále vylepšit?
+\end{enumerate}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hlavní dokument (neměňte)                                      % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\checkcorrectness
+
+\logo
+
+\heading
+
+\basicinfo
+
+\gradestable
+
+\thesiscomment
+
+\thesisquestions
+
+\finalstatement
+
+\end{document}

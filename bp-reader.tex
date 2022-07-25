@@ -1,0 +1,79 @@
+\documentclass{biochemistry-reports}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typ posudku (neměňte)                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesistype}{bp}
+\renewcommand{\reporttype}{reader}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (1) Základní informace                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesisauthor}{Tomáš Marný}
+
+% Zvolte vhodnou specializaci: Biochemie, Aplikovaná biochemie, Bioinformatika.
+\renewcommand{\specialization}{Bioinformatika}
+
+\renewcommand{\thesistitle}{Moje úžasná práce}
+\renewcommand{\thesisreader}{Mgr. Prokop Buben, Ph.D.}
+\renewcommand{\readerworkplace}{Bradavice}
+
+% Má práce experimentální charakter? Zvolte Ano nebo Ne.
+\renewcommand{\experimental}{Ano}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (2) Známky                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Zvolte hodnocení A-F v každé kategorii
+\renewcommand{\expertiselevel}{A} 			% Odborná úroveň
+\renewcommand{\textlevel}{B} 				% Textová úroveň
+\renewcommand{\graphiclevel}{A}				% Grafická úroveň
+\renewcommand{\scopelevel}{D}	 			% Rozsah
+\renewcommand{\literaturelevel}{A} 		    % Literatura
+
+% Zvolte závěrečné doporučení, buď OK nebo NOK
+\newcommand{\result}{OK}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (3) Vlastní text posudku, otázky                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesisreview}{%
+% Napište text posudku místo následujícího příkazu 
+\lipsum[1-3]
+}
+
+\renewcommand{\questions}{%
+\begin{enumerate}
+% Nahraďte otázky vlastními
+\item Jaký je největší přínos vaší práce?
+\item Co by šlo dále vylepšit?
+\end{enumerate}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hlavní dokument (neměňte)                                      % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\checkcorrectness
+
+\logo
+
+\heading
+
+\basicinfo
+
+\gradestable
+
+\thesiscomment
+
+\thesisquestions
+
+\finalstatement
+
+\end{document}
