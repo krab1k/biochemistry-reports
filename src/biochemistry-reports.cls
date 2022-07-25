@@ -11,7 +11,8 @@
 \RequirePackage{xstring}
 \RequirePackage{array}
 \RequirePackage{graphicx}
-
+\RequirePackage{pdftexcmds}
+\RequirePackage[pdfusetitle]{hyperref}
 
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
@@ -39,6 +40,7 @@
 \newcommand{\readerworkplace}{Bradavice}
 
 \newcommand{\experimental}{ANO}
+
 
 % Define grading categories
 \newcommand{\expertiselevel}{X}
@@ -78,6 +80,15 @@
 }
 % end of \checkcorrectness
 }
+
+\newcommand{\strcmpx}[4]{%
+\ifnum\pdf@strcmp{#1}{#2}=0 #3\else #4\fi
+}
+
+\author{\strcmpx{\reporttype}{supervisor}{\thesissupervisor}{\thesisreader}}
+
+
+\title{Posudek \strcmpx{\thesistype}{bp}{bakalářské}{diplomové} práce -- \thesisauthor}
 
 \newcommand{\gradeA}{1.0}
 \newcommand{\gradeB}{1.5}
@@ -127,10 +138,10 @@
 \begin{center}
 \begin{huge}
 \textsc{Posudek
-\IfStrEq{\reporttype}{supervisor}
+\strcmpx{\reporttype}{supervisor}
     {vedoucího}
     {oponenta}
-\IfStrEq{\thesistype}{bp}
+\strcmpx{\thesistype}{bp}
     {bakalářské}
     {diplomové}
 práce}
@@ -147,8 +158,8 @@ práce}
 \textbf{Specializace:} & \specialization\\[10pt]
 \textbf{Název práce:} & \thesistitle\\[10pt]
 \textbf{Jméno \IfStrEq{\reporttype}{supervisor}{vedoucího}{oponenta} práce:} & \IfStrEq{\reporttype}{supervisor}{\thesissupervisor}{\thesisreader}\\
-\textbf{Pracoviště \IfStrEq{\reporttype}{supervisor}{vedoucího}{oponenta} práce:} & \IfStrEq{\reporttype}{supervisor}{\supervisorworkplace}{\readerworkplace}\\[10pt]
-\IfStrEq{\thesistype}{bp}{\textbf{Má práce experimentální charakter:} & \experimental\\}{}
+\textbf{Pracoviště \IfStrEq{\reporttype}{supervisor}{vedoucího}{oponenta} práce:} & \strcmpx{\reporttype}{supervisor}{\supervisorworkplace}{\readerworkplace}\\[10pt]
+\strcmpx{\thesistype}{bp}{\textbf{Má práce experimentální charakter:} & \experimental\\}{}
 \end{tabular}
 \end{center}
 }
@@ -228,9 +239,9 @@ práce}
 }
 
 \newcommand{\gradestable}{%
-\IfStrEq{\thesistype}{bp}
-{\IfStrEq{\reporttype}{supervisor}{\bpsupervisor}{\bpreader}}
-{\IfStrEq{\reporttype}{supervisor}{\dpsupervisor}{\dpreader}}
+\strcmpx{\thesistype}{bp}
+{\strcmpx{\reporttype}{supervisor}{\bpsupervisor}{\bpreader}}
+{\strcmpx{\reporttype}{supervisor}{\dpsupervisor}{\dpreader}}
 }
 
 \newcommand{\thesisreview}{\lipsum[1-2]}
@@ -238,9 +249,7 @@ práce}
 \newcommand{\thesiscomment}{%
 \bigskip
 \noindent\textbf{Komentář
-\IfStrEq{\reporttype}{supervisor}
-    {vedoucího}
-    {oponenta}
+\strcmpx{\reporttype}{supervisor}{vedoucího}{oponenta}
 práce:}\\
 \thesisreview
 }
@@ -259,7 +268,7 @@ práce:}\\
 
 \newcommand{\finalstatement}{%
 \bigskip
-\noindent\textbf{Závěr:} Předloženou práci \IfStrEq{\result}{OK}{\textit{doporučuji}}{\textit{nedoporučuji}} k obhajobě.\\
+\noindent\textbf{Závěr:} Předloženou práci \strcmpx{\result}{OK}{\textit{doporučuji}}{\textit{nedoporučuji}} k obhajobě.\\
 
 \bigskip
 \noindent V Brně dne \today \hfill Podpis:\phantom{My awesome sign}
